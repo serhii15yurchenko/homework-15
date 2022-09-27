@@ -137,7 +137,7 @@ let even = 0;
 let odd = 0;
 alert ('Ввeдіть 10 чисел');
 for (i = 0; i < 10; i++) {
-    let num = prompt ('Введіть число');
+    let num = +prompt ('Введіть число');
     if (num > 0) {
         positive = positive + 1;
     } else if (num === 0) {
@@ -145,9 +145,9 @@ for (i = 0; i < 10; i++) {
     } else if (num < 0) {
         negative = negative + 1;
     }
-    if (num % 2 == 0) {
+    if (num != 0 && num % 2 == 0) {
         even = even + 1;
-    } else if (num % 2 !== 0) {
+    } else if (num % 2) {
         odd = odd + 1;
     }
 }
